@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <title>Game</title>
+    <link rel="styleSsheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="src/index.css">
+</head>
+
+<body>
+    <div class="sticky-top">
+        <button onclick="randomizeAllPositions()">Randomize</button>
+        <button onclick="clearPlaySpaces()">Clear All</button>
+
+        <div class="dropdown">
+            <button>Play Spaces</button>
+            <div class="content">
+                <a href="#" onclick="addPlaySpace()">Starting Space</a>
+                <a href="#" onclick="addPlaySpace()">Ending Space</a>
+                <a href="#" onclick="addPlaySpace()">Nothing Space</a>
+                <a href="#" onclick="addPlaySpace()">Spin Wheel Space</a>
+                <a href="#" onclick="addPlaySpace()">Shop Space</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="canvas-container" class="canvas-container">
+        <div id="canvas" class="canvas">
+            <div class="play-space" data-id="1">
+                <p>Start</p>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="src/index.js"></script>
+</body>

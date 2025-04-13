@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --popup-color: rgba(51, 51, 51, 0.8);
+    --font-family: 'Poppins', Arial, sans-serif;
+    --font-size: 16px;
+    --button-gradient: linear-gradient(0deg, dimgray, darkgray);
+    --button-hover: linear-gradient(180deg, #555, #333);
+    --pulse-color: rgba(255, 255, 255, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    font-family: var(--font-family);
+}
+
+.canvas-container {
+    width: 100%;
+    height: 100%;
+    cursor: grab;
+    background: repeating-conic-gradient(#f0f0f0 0% 25%, #ffffff 0% 50%) 0 0 / 100px 100px;
+    position: relative;
+    overflow: hidden;
+}
+
+.canvas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+}
+
+.play-space {
+    position: absolute;
+    width: 200px;
+    height: 150px;
+    background-color: rgba(255, 255, 0, 0.5);
+    border: 2px solid #004080;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    overflow: visible;
+}
+
+.play-space p {
+    font-size: var(--font-family);
+    font-weight: 400;
+    letter-spacing: 1px;
+    user-select: none;
+    margin: 0;
+    font-size: var(--font-size);
+    overflow: visible;
+}
+
+.sticky-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    background: var(--popup-color);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    z-index: 1000;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    overflow: visible;
+}
+
+.sticky-top button {
+    background: var(--button-gradient);
+    color: #ffffff;
+    border: none;
+    padding: 14px 30px;
+    border-radius: 8px;
+    font-size: var(--font-family);
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.1s ease;
+    height: auto;
+}
+
+.sticky-top button:hover {
+    background: var(--button-hover);
+}
+
+.sticky-top button:active {
+    transform: translateY(1px);
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    height: auto;
+    overflow: visible;
+}
+
+.dropdown button {
+    background: var(--button-gradient);
+    color: #ffffff;
+    border: none;
+    padding: 14px 30px;
+    border-radius: 8px;
+    font-size: var(--font-family);
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.1s ease;
+    height: auto;
+}
+
+.dropdown button:hover {
+    background: var(--button-hover);
+}
+
+.dropdown button:active {
+    transform: translateY(1px);
+}
+
+.dropdown .content {
+    display: none;
+    position: absolute;
+    background: #333;
+    border-radius: 6px;
+    padding: 10px 0;
+    top: 100%;
+    left: 0;
+    z-index: 1001;
+    min-width: 120px;
+    box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.8);
+    height: auto;
+    overflow: visible;
+}
+
+.dropdown .content a {
+    display: block;
+    padding: 10px 15px;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: var(--font-family);
+    font-weight: 500;
+    height: auto;
+}
+
+.dropdown .content a:hover {
+    background: var(--button-hover);
+}
+
+.dropdown:hover .content {
+    display: block;
+}
